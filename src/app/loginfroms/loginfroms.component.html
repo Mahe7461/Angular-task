@@ -1,0 +1,45 @@
+<p>loginfroms works!</p>
+<label>  
+  Name:
+  <input type="text" [formControl]="name"><br>
+  Email:
+  <input type='text' [formControl]='Email' ><br>
+  Password:
+  <input type='Password' [formControl]='Password'><br>
+  date:
+  <input type='date' [formControl]='date'><br>
+  Phone number:
+  <input type='phone2numeric' [formControl]='phonenumber'><br>
+  landline number:
+  <input type='pluralize' [formControl]='landline_number'><br>
+  gender:
+ <div class='form-check form-group'>
+ <label class ='form-check-label' for='male'>
+ male
+ </label>
+ 
+ <input type='radio' name='gender' id = 'male' check >
+ </div>
+ <div class='form-check form-group'>
+ <label class ='form-check-label' for='female'>
+ female
+ </label>
+ 
+ <input type='radio' name='gender' id='female'check><br>
+  
+contact by:
+ <div class='form-check form-group'>
+ <label class ='form-check-label' for='phone number'>
+ phone number
+ </label>
+ 
+ <input type='checkbox' name='contacted by:' id = 'phone number' check >
+ </div>
+ <div class='form-check form-group'>
+ <label class ='form-check-label' for='mail'>
+ mail
+ </label>
+ 
+ <input type='checkbox' name='contacted by:' id='mail'check><br>
+ <button type='submit' >submit</button>
+ 
