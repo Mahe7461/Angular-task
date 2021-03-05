@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -20,6 +21,8 @@ export class MovieService {
   private _url: string = ''
   
   constructor() { }
+ 
+
   getNames(){
    
     }

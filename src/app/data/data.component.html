@@ -1,0 +1,31 @@
+<div class='container'>
+  <table class='table table-bordered'>
+    <thead>
+      <tr>
+        <th> name </th>
+        <th>Email </th>
+        <th>Password</th>
+        <th>date </th>
+        <th>phonenumber</th>
+        <th>landline_number</th>
+        <th>gender</th>
+        <th>contactby</th>
+        
+      </tr>  
+    </thead>    
+
+      
+      <tbody>
+      <tr *ngFor='let dat of values'>
+        <td><span>{{dat.name}}</span>
+        <td><span>{{dat.Email}}</span></td>
+        <td><span>{{dat.Password}}</span>
+        <td><span>{{dat.date}}</span></td>
+        <td><span>{{dat.phonenumber}}</span></td>
+        <td><span>{{dat.landline_number}}</span></td>
+        <td><span>{{dat.gender}}</span></td>
+        <td><span>{{dat.contactby}}</span></td>
+      </tbody>
+    <button (click)='save()'>save</button>
+  </table>
+</div>

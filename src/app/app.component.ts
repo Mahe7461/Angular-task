@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import{ Router} from '@angular/router';
 
 import {MovieService} from "../app/movie.service"
 
@@ -9,24 +10,15 @@ import {MovieService} from "../app/movie.service"
   providers: [MovieService]
 })
 export class AppComponent {
+  
   title = 'Movietime';
   readme(){
     console.log('click button')
   }
-  intro="Welcome to movietime"
-  infoM1:any[]=[];
-  infoM2:any[]=[];
-  infoM3:any[]=[];
-  getinfomi1(){
-    this.infoM1=this.rser.getinfo1()
+  constructor(private rounter: Router ){}
+  onBack():void{
+    this.rounter.navigate(['/loginfroms']);
   }
-  getinfomi2(){
-    this.infoM2=this.rser.getinfo1()
-  }
-  getinfomi3(){
-    this.infoM3=this.rser.getinfo1()
-  }
-  constructor(private rser: MovieService){}
   }
 
 

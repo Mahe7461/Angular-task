@@ -1,5 +1,5 @@
 
-<h1>     {{intro}}              </h1><br>
+
 <router-outlet></router-outlet>
 
 
@@ -17,20 +17,12 @@
 </nav><br>
 <nav>
     <a routerLink='/loginfroms'>loginfroms</a>
-</nav>
+</nav><br>
+<nav>
+    <a routerLink='/data'>data</a>
+</nav><br>
 
 
 <router-outlet></router-outlet>
 
 
-<br><Button type='Button' name='Button' (click)="getinfomi1()">info1</Button>
-<ul class=''>
-    <li *ngFor ='let info1 of infoM1'>{{infoM1}}</li>
-<br>
-<Button type='Button' name='Button' (click)="getinfomi2()">info2</Button>
-<ul class=''>
-    <li>{{infoM2}}</li>
-<br>
-<Button type='Button' name='Button' (click)="getinfomi3()">info3</Button><br>
-<ul class=''>
-    <li *ngFor ='let info3 of infoM3'>{{infoM3}}</li>

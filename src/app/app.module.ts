@@ -8,6 +8,8 @@ import { LoginComponent } from './login/login.component';
 import { CommentComponent } from './comment/comment.component';
 import { LoginfromsComponent } from './loginfroms/loginfroms.component';
 import { ReactiveFormsModule} from '@angular/forms';
+import { DataComponent } from './data/data.component';
+
 
 @NgModule({
   declarations: [
@@ -16,6 +18,7 @@ import { ReactiveFormsModule} from '@angular/forms';
     LoginComponent,
     CommentComponent,
     LoginfromsComponent,
+    DataComponent,
   ],
   imports: [
     BrowserModule,

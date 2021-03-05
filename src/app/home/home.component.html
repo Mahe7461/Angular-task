@@ -1,2 +1,22 @@
 <p>home works!</p>
 <h1>Welcome to home page of Movietime</h1>
+<button (click)='show()'>show</button>
+
+<div class='col-md-8 mt-4 mb-4'>
+    <table class='table table-bordered'>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = 'let item of userdata' >
+            <td><span>{{item.name}}</span></td>
+            <td><span>{{item.email}}</span></td>
+            <td><button type='button' class='btn btn-primary'>Remove</button></td>
+            
+        </tbody>
+    </table>
+</div>             

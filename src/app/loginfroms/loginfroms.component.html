@@ -1,45 +1,49 @@
-
-<label>  
-  Name:
-  <input type="text" [formControl]="name"><br>
-  Email:
-  <input type='text' [formControl]='Email' ><br>
-  Password:
-  <input type='Password' [formControl]='Password'><br>
-  date:
-  <input type='date' [formControl]='date'><br>
-  Phone number:
-  <input type='phone2numeric' [formControl]='phonenumber'><br>
-  landline number:
-  <input type='pluralize' [formControl]='landline_number'><br>
-  gender:
- <div class='form-check form-group'>
- <label class ='form-check-label' for='male'>
- male
- </label>
+<form [formGroup]='userdata'>
+  <label>  
+    Name:
+    <input type="text" formControlName="name"><br>
+  </label><br>
+    Email:
+    <input type='text' formControlName='Email' ><br>
+    Password:
+    <input type='Password' formControlName='Password'><br>
+    Date:
+    <input type='date' formControlName='date'><br>
+    Phone number:
+    <input type='phone2numeric' formControlName='phonenumber'><br>
+    Landline number:
+    <input type='pluralize' formControlName='landline_number'><br>
+</form>
+<form [formGroup]='userdata'>
+  Gender:
+  <div class='form-check form-group'>
+  <label for='male'>Male
+  </label>
  
- <input type='radio' name='gender' id = 'male' check >
- </div>
- <div class='form-check form-group'>
- <label class ='form-check-label' for='female'>
- female
- </label>
- 
- <input type='radio' name='gender' id='female'check><br>
+   <input type='radio' name='gender' formControlName='gender'  value='Male'  ><br>
   
-contact by:
- <div class='form-check form-group'>
- <label class ='form-check-label' for='phone number'>
- phone number
- </label>
+    <label  for='female'>Female
+  
  
- <input type='checkbox' name='contacted by:' id = 'phone number' check >
- </div>
- <div class='form-check form-group'>
- <label class ='form-check-label' for='mail'>
- mail
- </label>
+  <input  type='radio' name='gender' formControlName='gender'  value='Female'>
+  </label>
+  </div>
+  
+  Contact by:
+  <div >
+  <label  for='contactby'>
+  Phone number
+  </label>
  
- <input type='checkbox' name='contacted by:' id='mail'check><br>
- <button type='submit' >submit</button>
+  <input type='checkbox'  formControlName='contactby' value='phonenumber' >
+  </div>
+  <div >
+  <label for='contactby'>
+  Mail
+  </label>
+  <input type='checkbox' name='contactby' formControlName='contactby' value='Mail' >
+  </div>
  
+</form> 
+ <button
+  type='submit' (click)='submit()'>submit</button>

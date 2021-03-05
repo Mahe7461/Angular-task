@@ -1,24 +1,48 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';  
+import { FormControl, FormGroup } from '@angular/forms';
+import { Router,ActivatedRoute,ParamMap } from '@angular/router';
+
+
 @Component({
   selector: 'app-loginfroms',
   templateUrl: './loginfroms.component.html',
   styleUrls: ['./loginfroms.component.css']
 })
 export class LoginfromsComponent implements OnInit {
-  name = new FormControl('enter your name');
-  Email = new FormControl('enter your email id');
-  Password = new FormControl('');
-  date = new FormControl(''); 
-  phonenumber = new FormControl(''); 
-  tag = new FormControl('');
-  landline_number = new FormControl('');
-  gender = new FormControl('');
-  
+  userdata=new FormGroup({
+    name : new FormControl(''),
+    Email :new FormControl(''),
+    Password :new FormControl(''),
+    date :new FormControl(''),
+    phonenumber :new FormControl(''),
+    landline_number : new FormControl(''),
+    gender : new FormControl(''),
+    contactby:new FormControl(''),
 
-  constructor() { }
+  });
+  tabledata:any=[];
+  a:any='hello';
+    
 
-  ngOnInit(): void {
+
+  constructor(private rounter:ActivatedRoute, private route: Router ) {
+       }
+
+  ngOnInit(): void {}
+   /* this.rounter.queryParams.subscribe(params=>{
+      this.userdata = params['userdata'];
+    });
+    
+  }*/
+
+  submit(){
+    let data:any=this.userdata.value;
+    console.log(this.userdata.value);
+    this.tabledata.push(this.userdata.value)
+    this.route.navigate(['./data'],{
+    queryParams:{data:JSON.stringify(data)}
+
+    })
+
   }
-
 }
