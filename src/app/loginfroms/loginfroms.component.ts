@@ -40,7 +40,7 @@ export class LoginfromsComponent implements OnInit {
     console.log(this.userdata.value);
     this.tabledata.push(this.userdata.value)
     this.route.navigate(['./data'],{
-    queryParams:{data:JSON.stringify(data)}
+    queryParams:{data:btoa(JSON.stringify(data))}
 
     })
 

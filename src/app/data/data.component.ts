@@ -32,7 +32,7 @@ export class DataComponent implements OnInit {
   ngOnInit(): void {
     this.rounter.queryParams.subscribe((params)=>{
       console.log(params);
-      this.data=JSON.parse(params.data);
+      this.data=JSON.parse(atob(params.data));
       this.values.push(this.data)
       
     

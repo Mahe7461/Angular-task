@@ -9,6 +9,8 @@ import { CommentComponent } from './comment/comment.component';
 import { LoginfromsComponent } from './loginfroms/loginfroms.component';
 import { ReactiveFormsModule} from '@angular/forms';
 import { DataComponent } from './data/data.component';
+import { LinkComponent } from './link/link.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -19,11 +21,14 @@ import { DataComponent } from './data/data.component';
     CommentComponent,
     LoginfromsComponent,
     DataComponent,
+    LinkComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    HttpClientModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
